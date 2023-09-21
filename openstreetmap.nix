@@ -237,7 +237,7 @@ in
       ];
       virtualHosts = {
         "tileserver" = {
-          documentRoot = "/var/www";
+          documentRoot = ./wwwroot;
           listen = [{ inherit (cfg) port; }];
           extraConfig = ''
             LoadTileConfigFile ${renderdConfigFile}
